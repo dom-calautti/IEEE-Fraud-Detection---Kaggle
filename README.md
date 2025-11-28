@@ -12,21 +12,13 @@ SETUP
    git clone https://github.com/dom-calautti/IEEE-Fraud-Detection---Kaggle.git
    cd ieee-fraud
    ```
-3) Python environment (we standardize on Python 3.11)
-   Conda:
+2) Download the Dataset and place in /data/raw
+   
+3) Run Jupyter notebook
    ```
-     conda create -n ieeefraud python=3.11 -y
-     conda activate ieeefraud
+     jupyter notebook
    ```
-   or a virtual environment:
-   ```
-     py -3.11 -m venv .venv
-     .\.venv\Scripts ctivate
-    ```
-5) Install packages
-   ```
-   pip install -r requirements.txt
-   ```
+4) Run all cells in model_comparison.ipynb
 ------------------------------------------------------------
 DATA
 ------------------------------------------------------------
@@ -44,27 +36,3 @@ We use Kaggle’s competition data. It is **NOT** checked into Git.
    unzip "*.zip"
    cd ../../
    ```
-------------------------------------------------------------
-NOTEBOOKS 
-------------------------------------------------------------
-Start Jupyter Lab:
-```
-  jupyter lab
-```
-1. notebooks/eda.ipynb
-   - Exploratory plots, fraud rate by hour/day-of-week, amount distributions
-
-2. notebooks/preprocess.ipynb
-   - Preprocessing, missingness flags, time-based train/valid split
-
-3. notebooks/baselines.ipynb
-   - Baselines (Logistic Regression with class_weight='balanced', XGBoost/LightGBM)
-   - Prints ROC-AUC and PR-AUC
-
-------------------------------------------------------------
-COLLABORATION WORKFLOW
-------------------------------------------------------------
-- Branch naming: eda/<name>
-
-
-
